@@ -1,0 +1,32 @@
+﻿@echo off
+color 0a
+:a
+CLS
+echo @@@@@@@@@@@@@@@@@@@@@@
+echo @@ Applications @@
+echo @@ @@
+echo @@ @@
+echo @@ * * @@
+echo @@ * Select Your Choice * @@
+echo @@ * * @@
+echo @@ * * @@
+echo @@ * [1] Word * @@
+echo @@ * [2] Excel * @@
+echo @@ * [3] Power Point * @@
+echo @@ * [4] Outlook * @@
+echo @@ * [5] OneNote * @@
+echo @@ * [6] Paint * @@
+echo @@ * * @@
+echo @@ @@
+echo @@@@@@@@@@@@@@@@@@@@@@
+echo.
+set /p "pil=Insert Your Choice [1-7] : "
+if %pil%==1 start winword
+if %pil%==2 start excel
+if %pil%==3 start powerpnt
+if %pil%==4 start outlook
+if %pil%==5 start onenote
+if %pil%==6 start mspaint
+echo.
+Pause
+goto a

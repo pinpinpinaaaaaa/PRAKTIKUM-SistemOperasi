@@ -1,0 +1,30 @@
+@Echo Off
+:menu
+cls
+echo        MENU
+echo [1] Espresso       20k
+echo [2] Cappucino      22k
+echo [3] Coffe Latte    24k
+echo [4] Americano      25k
+echo [5] Mocha Latte    27k
+echo [6] Mochacino      30k
+echo [7] Selesai
+echo.
+:pemesanan
+set /p "menu=Pilihan Menu :"
+set /p "Qty=Banyaknya pesanan :"
+if %menu%=='' goto menu
+if %menu%==1 echo Espresso Qty %Qty%
+if %menu%==2 echo Cappucino Qty %Qty%
+if %menu%==3 echo Coffe Latte Qty %Qty%
+if %menu%==4 echo Americano Qty %Qty%
+if %menu%==5 echo Mocha Latte Qty %Qty%
+if %menu%==6 echo Mochacino Qty %Qty%
+if %menu%==7 goto penutupan
+echo.
+goto pemesanan
+:penutupan
+echo.
+echo TERIMA KASIH TELAH BERBERLANJA :)
+Pause
+goto menu

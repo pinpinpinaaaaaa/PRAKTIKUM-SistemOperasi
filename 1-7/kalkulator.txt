@@ -1,0 +1,40 @@
+@Echo Off
+title Belajar Mneghitung dengan file Batch
+:awal
+color 1b
+echo ********************************
+echo BELAJAR MENGHITUNG YUK!
+echo.
+echo ********************************
+echo.
+set /p "b1=Masukan Bilangan ke-1 : "
+set /p "b2=Masukan Bilangan ke-2 : "
+echo.
+echo [1]Pertmbahan [2]Pengurangan [3]Perkalian [4]Pembagian
+set /p "pil=Pilih Action : "
+if %pil%==''goto awal
+if %pil%==1 goto tambah
+if %pil%==2 goto kurang
+if %pil%==3 goto kali
+if %pil%==4 goto bagi
+echo.
+:tambah
+set /a b=b1+b2
+echo hasil Pertambahannya adalah = %b%
+pause
+goto awal
+:kurang
+set /a b=b1-b2
+echo hasil Pengurangannya adalah = %b%
+pause
+goto awal
+:kali
+set /a b=b1*b2
+echo hasil Perkaliannya adalah = %b%
+pause
+goto awal
+:bagi
+set /a b=b1/b2
+echo hasil Pembagianya adalah = %b%
+pause
+goto awal
